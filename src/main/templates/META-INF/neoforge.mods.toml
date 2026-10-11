@@ -73,9 +73,9 @@ ordering = "NONE"
 side = "BOTH"
 
 [[dependencies."${mod_id}"]]
-modId = "ftbchunks"
+modId = "openpartiesandclaims"
 type = "required"
-versionRange = "[2101.1.20,)"
+versionRange = "[0.32.7,)"
 ordering = "AFTER"
 side = "BOTH"
 

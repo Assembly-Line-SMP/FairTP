@@ -10,6 +10,12 @@ group = mod_group_id
 
 repositories {
     mavenLocal()
+    repositories {
+        maven {
+            url "https://chocolateminecraft.com/maven"
+            name "Xaero's Maven"
+        }
+    }
 }
 
 base {
@@ -112,8 +118,7 @@ dependencies {
 
     // Example project dependency using a sister or child project:
     // implementation project(":myproject")
-    compileOnly files("jars/ftb-chunks-neoforge-2101.1.20.jar")
-    compileOnly files("jars/ftb-library-neoforge-2101.1.32.jar")
+    compileOnly "xaero.pac:open-parties-and-claims-neoforge-${minecraft_version}:${opac_version}"
 
     // For more info:
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html

@@ -13,7 +13,7 @@ public class Config {
     private static final ModConfigSpec.IntValue DEADZONE_RADIUS = BUILDER
             .comment("The radius of the deadzone around the spawn point. Players will not be teleported to locations within this radius.")
             .defineInRange("deadzone_radius", 200, 0, Integer.MAX_VALUE);
-    private static final ModConfigSpec.IntValue TELEPORT_RADIUS = BUILDER
+    public static final ModConfigSpec.IntValue TELEPORT_RADIUS = BUILDER
             .comment("The radius around the spawn point to teleport players to. Players will be teleported to a random location within this radius.")
             .defineInRange("teleport_radius", 1000, 0, Integer.MAX_VALUE);
     static final ModConfigSpec SPEC = BUILDER.build();
