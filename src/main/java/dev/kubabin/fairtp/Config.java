@@ -11,10 +11,10 @@ import net.neoforged.neoforge.common.ModConfigSpec;
 public class Config {
     private static final ModConfigSpec.Builder BUILDER = new ModConfigSpec.Builder();
     private static final ModConfigSpec.IntValue DEADZONE_RADIUS = BUILDER
-            .comment("The radius of the deadzone around the spawn point. Players will not be teleported to locations within this radius.")
+            .comment("The radius of the circular deadzone around the spawn point. Must be smaller than teleport_radius.")
             .defineInRange("deadzone_radius", 200, 0, Integer.MAX_VALUE);
     public static final ModConfigSpec.IntValue TELEPORT_RADIUS = BUILDER
-            .comment("The radius around the spawn point to teleport players to. Players will be teleported to a random location within this radius.")
+            .comment("The half-width of the square search area around the spawn point. Must be larger than deadzone_radius.")
             .defineInRange("teleport_radius", 1000, 0, Integer.MAX_VALUE);
     static final ModConfigSpec SPEC = BUILDER.build();
     public static int deadzone_radius;
